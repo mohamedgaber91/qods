@@ -42,10 +42,10 @@ var largSwiper = new Swiper('.larg-swiper', {
         nextEl: '.larg-next',
         prevEl: '.larg-prev',
     },
-    // autoplay: {
-    //     delay: 3000, 
-    //     disableOnInteraction: false, 
-    // },
+    autoplay: {
+        delay: 3000, 
+        disableOnInteraction: false, 
+    },
  
 });
 
