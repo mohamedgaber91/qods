@@ -1,1 +1,1 @@
-# qods
+# smart-ways
