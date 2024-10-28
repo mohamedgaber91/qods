@@ -1,34 +1,6 @@
 
 new WOW().init();
 
-var categoriesSwiper = new Swiper('.products-swiper', {
-    slidesPerView:4, 
-    spaceBetween: 30, 
-    navigation:false,
-    loop: true, 
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-    },
-
-    breakpoints: {
-        1200: {
-            slidesPerView: 4,
-        },
-        992: {
-            slidesPerView: 3,
-        },
-        768: {
-            slidesPerView: 3,
-        },
-        576: {
-            slidesPerView: 2,
-        },
-        320: {
-            slidesPerView: 1,
-        }
-    }
-});
 var largSwiper = new Swiper('.larg-swiper', {
     slidesPerView:1, 
     spaceBetween: 0, 
@@ -42,80 +14,12 @@ var largSwiper = new Swiper('.larg-swiper', {
         nextEl: '.larg-next',
         prevEl: '.larg-prev',
     },
-    // autoplay: {
-    //     delay: 3000, 
-    //     disableOnInteraction: false, 
-    // },
- 
-});
-
-var categoriesSwiper = new Swiper('.category-swiper', {
-    slidesPerView:5, 
-    spaceBetween: 30, 
-  
-  
-    navigation: {
-        nextEl: '.swiper-button-next', 
-        prevEl: '.swiper-button-prev'  
-    },
-    breakpoints: {
-        1200: {
-            slidesPerView: 5,
-        },
-        992: {
-            slidesPerView: 4,
-        },
-        768: {
-            slidesPerView: 3,
-        },
-        576: {
-            slidesPerView: 2,
-        },
-        320: {
-            slidesPerView: 1,
-        }
-    }
-});
-var brandsSwiper = new Swiper('.brands-swiper', {
-    slidesPerView: 7, 
-    spaceBetween: 30, 
-
-    loop: false,
-
-    navigation: {
-        nextEl: '.brands-swiper-next',
-        prevEl: '.brands-swiper-prev',
-    },
-    breakpoints: {
-        1200: {
-            slidesPerView: 6,
-        },
-        992: {
-            slidesPerView: 5,
-        },
-        768: {
-            slidesPerView: 4,
-        },
-        576: {
-            slidesPerView: 3,
-        },
-        320: {
-            slidesPerView: 2,
-        }
-    }
-});
-var deliverySwiper = new Swiper('.delevery-swiper', {
-    slidesPerView:1,
-    spaceBetween: 30, 
-    loop: false, 
-   
-    navigation: {
-        nextEl: '.delevery-swiper-next', 
-        prevEl: '.delevery-swiper-prev'  
+    autoplay: {
+        delay: 3000, 
+        disableOnInteraction: false, 
     },
  
 });
-
 const scrollToTopButton = document.getElementById("scrollToTop");
 
 window.onscroll = function() {
@@ -167,12 +71,10 @@ accordionHeaders.forEach(header => {
 function toggleSidebar() {
     document.getElementById("sidebar").classList.toggle("active");
 }
-// انتظار تحميل الصفحة بالكامل للتأكد من أن عناصر السلايدر جاهزة
 document.addEventListener("DOMContentLoaded", function () {
     const swiperContainer = document.querySelector('.swiper-container');
     const swiperSlides = swiperContainer.querySelectorAll('.swiper-slide');
     
-    // إذا كانت الشريحة واحدة، قم بإخفاء الأسهم
     if (swiperSlides.length === 1) {
       swiperContainer.querySelector('.swiper-button-next').style.display = 'none';
       swiperContainer.querySelector('.swiper-button-prev').style.display = 'none';
