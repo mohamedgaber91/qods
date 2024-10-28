@@ -167,3 +167,15 @@ accordionHeaders.forEach(header => {
 function toggleSidebar() {
     document.getElementById("sidebar").classList.toggle("active");
 }
+// انتظار تحميل الصفحة بالكامل للتأكد من أن عناصر السلايدر جاهزة
+document.addEventListener("DOMContentLoaded", function () {
+    const swiperContainer = document.querySelector('.swiper-container');
+    const swiperSlides = swiperContainer.querySelectorAll('.swiper-slide');
+    
+    // إذا كانت الشريحة واحدة، قم بإخفاء الأسهم
+    if (swiperSlides.length === 1) {
+      swiperContainer.querySelector('.swiper-button-next').style.display = 'none';
+      swiperContainer.querySelector('.swiper-button-prev').style.display = 'none';
+    }
+  });
+  
